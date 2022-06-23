@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/*
+font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif;
+*/
+
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /*(graphic design text)*/
+    --Dark-blue: hsl(198, 62%, 26%);
+    /*(photography text)*/
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    /*(footer)*/
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+}
+
+header {
+    background-image: url(../images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    padding: 1.5rem;
+}
+
+nav h1 img {
+    padding-top: 11px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu li {
+    display: inline;
+    padding-left: 15px;
+    font-family: 'Barlow', sans-serif;
+    color: var(--White);
+}
+
+
+.menu li button {
+    color: black;
+    background-color: white;
+    height: 45px;
+    width: 120px;
+    border: none;
+    border-radius: 85px;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.menu li button:hover {
+    cursor: pointer;
+    color: var(--White);
+    background-color: hsl(0, 0%, 100%, 50%);
+}
+
+.header-principal {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 40px;
+}
+
+.header-principal img {
+    margin-top: 110px;
+    animation: pop-in 2s ease infinite;
+}
+
+@keyframes pop-in{
+    0%,50%,100%{
+        transform: translateY(0);
+    }
+    12.5%,37.5%{
+        transform: translateY(20px);
+    }
+
+    25%{
+        transform: translateY(10px);
+    }
+}
+
+.transform,
+.stand-out,
+.graphic-photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.transform div,
+.stand-out div,
+.graphic-photo div {
+    height: 527px;
+}
+
+.transform div img,
+.stand-out div img {
+    width: 632.5px;
+}
+
+.graphic-photo div:first-child {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-size: 632.5px;
+}
+
+.graphic-photo div:last-child {
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-size: 632.5px;
+}
+
+.textual-part {
+    padding: 10rem 5rem;
+}
+
+.textual-part h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 39px;
+    width: 420px;
+}
+
+.textual-part p {
+    color: var(--Grayish-blue);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.textual-part a {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.textual-part a::after {
+    background-color: var(--Yellow);
+    content: "";
+    display: block;
+    height: 10px;
+    border-radius: 10px;
+    position: absolute;
+    width: 120px;
+    top:14px;
+    left: -2px;
+    opacity: 0.2;
+    transition: all 1000ms ease-in-out;
+    z-index: -1;
+}
+
+.textual-part .learn-link::after{
+    background-color: var(--Soft-red);
+}
+
+.textual-part a:hover::after{
+    opacity: 0.8;
+}
+
+.graphic-photo div section{
+    color: var(--Dark-desaturated-cyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 20px;
+    width: 350px;
+    margin: 350px auto;
+    text-align: center;
+}
+
+.graphic-photo div section p{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 30px;
+    line-height: 1.5;
+}
+
+.graphic-photo div:last-of-type section{
+    color: var(--Dark-blue);
+}
