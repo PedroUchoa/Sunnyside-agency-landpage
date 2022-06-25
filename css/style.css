@@ -37,9 +37,9 @@ body {
 
 header {
     background-image: url(../images/desktop/image-header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
+    background-position: center bottom;
+    background-size: cover;
 }
 
 nav {
@@ -115,32 +115,22 @@ nav h1 img {
 }
 
 .transform,
-.stand-out,
-.graphic-photo {
+.stand-out{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .transform div,
-.stand-out div,
-.graphic-photo div {
-    height: 527px;
+.stand-out div {
+    height: 100%;
 }
 
 .transform div img,
 .stand-out div img {
     width: 100%;
+    height: 100%;
 }
 
-.graphic-photo div:first-child {
-    background-image: url(../images/desktop/image-graphic-design.jpg);
-    background-size: 100%;
-}
-
-.graphic-photo div:last-child {
-    background-image: url(../images/desktop/image-photography.jpg);
-    background-size: 100%;
-}
 
 .textual-part {
     padding: 10rem 5rem;
@@ -195,27 +185,36 @@ nav h1 img {
     opacity: 0.8;
 }
 
-.graphic-photo div section{
-    color: var(--Dark-desaturated-cyan);
-    font-family: 'Fraunces', serif;
-    font-weight: 900;
-    font-size: 20px;
-    width: 350px;
-    margin: 350px auto;
+.graphic-photo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 }
 
-.graphic-photo div section p{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding-top: 30px;
-    line-height: 1.5;
+.graphic-photo section{
+    border: 1px solid red;
+    height: 70vh;
+    background-size: cover;
+    position: relative;
 }
 
-.graphic-photo div:last-of-type section{
-    color: var(--Dark-blue);
+.graphic-photo section:first-of-type{
+    background-image: url(../images/desktop/image-graphic-design.jpg);
 }
+
+.graphic-photo section:last-of-type{
+    background-image: url(../images/desktop/image-photography.jpg);
+}
+
+.graphic-photo section div{
+    text-align: center;
+    border: 1px solid blue;
+    padding: 2rem;
+    position: absolute;
+    bottom: 80px;
+}
+
+
 
 .testimonials{
     text-align: center;
