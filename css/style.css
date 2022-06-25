@@ -188,11 +188,10 @@ nav h1 img {
 .graphic-photo{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    text-align: center;
+    
 }
 
 .graphic-photo section{
-    border: 1px solid red;
     height: 500px;
     background-size: cover;
     position: relative;
@@ -200,21 +199,36 @@ nav h1 img {
 
 .graphic-photo section:first-of-type{
     background-image: url(../images/desktop/image-graphic-design.jpg);
+    color: var(--Dark-desaturated-cyan);
 }
 
 .graphic-photo section:last-of-type{
     background-image: url(../images/desktop/image-photography.jpg);
+    color: var(--Dark-blue);
 }
 
 .graphic-photo section div{
     text-align: center;
-    border: 1px solid blue;
-    padding: 2rem;
+    bottom: 70px;
     position: absolute;
-    bottom: 80px;
+    width: 100%;
 }
 
+.graphic-photo section div h2{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 23px;
+    padding-bottom: 20px;
+}
 
+.graphic-photo section div p{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    width: 350px;
+    margin: 0 auto;
+    line-height: 25px;
+}
 
 .testimonials{
     text-align: center;
