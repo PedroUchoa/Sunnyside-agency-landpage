@@ -253,7 +253,7 @@ nav h1 img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 4.5rem 2rem;
 }
 
 .clients div img {
@@ -284,4 +284,13 @@ nav h1 img {
     font-weight: 600;
     font-size: 15px;
     padding-top: 1rem;
+}
+
+.images-section{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.images-section img{
+    width: 100%;
 }
