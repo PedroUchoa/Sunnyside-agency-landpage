@@ -44,7 +44,7 @@ header {
 
 nav {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 0.5fr;
     padding: 1.5rem;
 }
 
@@ -129,17 +129,17 @@ nav h1 img {
 
 .transform div img,
 .stand-out div img {
-    width: 632.5px;
+    width: 100%;
 }
 
 .graphic-photo div:first-child {
     background-image: url(../images/desktop/image-graphic-design.jpg);
-    background-size: 632.5px;
+    background-size: 100%;
 }
 
 .graphic-photo div:last-child {
     background-image: url(../images/desktop/image-photography.jpg);
-    background-size: 632.5px;
+    background-size: 100%;
 }
 
 .textual-part {
@@ -215,4 +215,20 @@ nav h1 img {
 
 .graphic-photo div:last-of-type section{
     color: var(--Dark-blue);
+}
+
+.testimonials{
+    text-align: center;
+}
+
+.clients{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+}
+
+.clients img{
+    max-width: 70px;
+    border-radius: 50%;
 }
